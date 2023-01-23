@@ -1,10 +1,90 @@
 :root {
-    --primario: #9C27B0;
-    --primarioOscuro: #89119D;
-    --secundario: #FFCE00;
-    --secundarioOscuro: rgb(233, 187, 2);
+    --primario: #AFC1DF;
+    --primarioOscuro: #7699D3;
+    --secundario: #D8CC4D;
     --blanco: #FFF;
     --negro: #000;
 
     --fuentePrincipal: 'Staatliches', cursive;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+h1, h3, p {
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--fuentePrincipal);
+}
+a {
+    text-decoration: none;
+}
+.contenido{
+}
+/** Navegacion **/
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secundario);
+}
+.yo{
+    max-width: 90%;
+    height: 500px;
+}
+img {
+    max-width: 90%;
+    width: 600px;
+    height: 350px;
+}
+.contenedor {
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: var(--primarioOscuro);
+    max-width: 85%;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+.contenedor h3, .contenedor p{
+    text-align: left;
+}
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media(min-width:768px){
+    .dos-columnas{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 2rem;
+    }
+}
+/*Footer*/
+footer{
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--negro);
 }
